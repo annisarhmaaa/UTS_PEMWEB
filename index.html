@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Mix Juice - Jus Buah Sehat</title>
+    <style>
+        /* Styling Umum */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f9f9;
+            /* Warna latar belakang pastel */
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(45deg, #FFDD00, #FFA500);
+            /* Gradasi kuning ke oranye */
+            color: #2b2f77;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ff69b4;
+            /* Warna pink cerah untuk kesan lebih ceria */
+        }
+
+        header nav h1 {
+            font-size: 36px; /* Ukuran font untuk judul header lebih besar */
+            color: #2b2f77;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: inline-flex;
+            gap: 30px; /* Jarak antar menu lebih lebar */
+        }
+
+        header nav ul li a {
+            color: #2b2f77;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Animasi hover */
+        }
+
+        header nav ul li a:hover {
+            background-color: #ff69b4;
+            color: white;
+            transform: scale(1.1); /* Efek memperbesar saat hover */
+        }
+
+        /* Main Styling */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff69b4;
+            /* Warna pink cerah */
+            text-align: center;
+            font-size: 28px; /* Ukuran font untuk sub-judul */
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: #ff69b4;
+            color: white;
+            padding: 12px;
+            text-align: center;
+        }
+
+        td {
+            padding: 12px;
+            text-align: left;
+            background-color: #ffe4e1;
+            /* Warna pastel pink */
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Produk Kami Styling */
+        .produk-kami {
+            margin-top: 40px;
+        }
+
+        .produk-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .produk-item {
+            width: 30%;
+            padding: 15px;
+            background: linear-gradient(135deg, #ffeb3b, #ff9800);
+            /* Gradasi kuning ke oranye */
+            color: #2b2f77;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .produk-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .produk-item img {
+            width: 100%;
+            height: auto;
+            max-width: 150px; /* Besarkan ukuran gambar */
+            border-radius: 50%;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .produk-item img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            transition: box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            box-shadow: 0 0 5px #ff69b4;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #ff1493;
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
+        footer {
+            background: linear-gradient(45deg, #FFDD00, #FFA500);
+            /* Gradasi kuning ke oranye */
+            color: #2b2f77;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #2b2f77;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ff69b4;
+        }
+
+        /* Styling untuk gambar logo dan teks di tengah */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Memastikan logo dan teks berada di tengah */
+            margin-top: 20px;
+        }
+
+        .static-img {
+            max-width: 300px; /* Besarkan ukuran maksimum untuk gambar logo */
+            height: auto;
+            margin-bottom: 20px; /* Jarak antara logo dan teks */
+            animation: bounce 1.5s infinite; /* Animasi bounce untuk logo */
+        }
+
+        /* Animasi bounce */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>MIX JUICE - JUS BUAH SEHAT</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content" id="About">
+            <img src="logo.jpg" alt="Logo Mix Juice - Jus Buah Sehat" class="static-img">
+            <p>Mix Juice adalah toko jus buah yang menyediakan berbagai macam jus yang sehat dan alami.</p>
+            <h2>SEDIA:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Menu</th>
+                        <th>Manfaat</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jus Mangga</td>
+                        <td>Mangga kaya akan vitamin C yang meningkatkan sistem kekebalan tubuh dan vitamin A yang baik untuk kesehatan mata dan kulit.</td>
+                        <td>Rp. 13.000</td>
+                    </tr>
+                    <tr>
+                        <td>Jus Alpukat</td>
+                        <td>Alpukat kaya akan lemak tak jenuh tunggal yang baik untuk kesehatan jantung karena dapat menurunkan kadar kolesterol jahat (LDL) dan meningkatkan kolesterol baik (HDL).</td>
+                        <td>Rp. 12.000</td>
+                    </tr>
+                    <tr>
+                        <td>Jus Strawberry</td>
+                        <td>Strawberry mengandung antioksidan seperti antosianin dan ellagic acid yang dapat membantu melawan radikal bebas, sehingga mengurangi risiko penyakit kronis seperti kanker dan penyakit jantung.</td>
+                        <td>Rp. 14.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Produk Kami Section -->
+        <section class="produk-kami">
+            <h2>PRODUK KAMI</h2>
+            <div class="produk-container">
+                <div class="produk-item">
+                    <img src="mangga.jpg" alt="Produk 1">
+                    <h3>JUS MANGGA</h3>
+                    <p>Minuman segar yang terbuat dari buah mangga matang yang diperas dan disaring. Dengan rasa manis yang alami dan aroma yang menggoda, jus ini menawarkan sensasi tropis yang menyegarkan. Kaya akan vitamin C dan serat, jus mangga juga dikenal baik untuk sistem kekebalan tubuh dan pencernaan.</p>
+                </div>
+                <div class="produk-item">
+                    <img src="alpukat.jpg" alt="Produk 2">
+                    <h3>JUS ALPUKAT</h3>
+                    <p>Minuman creamy yang terbuat dari daging buah alpukat yang halus dicampur dengan susu atau air. Rasanya lembut dan kaya, dengan sedikit rasa gurih yang membuatnya unik. Alpukat kaya akan lemak sehat, vitamin E, dan potasium, menjadikannya pilihan yang sehat dan mengenyangkan.</p>
+                </div>
+                <div class="produk-item">
+                    <img src="strawberry.jpg" alt="Produk 3">
+                    <h3>JUS STRAWBERRY</h3>
+                    <p>Minuman cerah dan menyegarkan yang terbuat dari stroberi segar yang diblender. Dengan rasa manis dan sedikit asam, jus ini memiliki aroma yang menggugah selera. Selain enak, jus stroberi juga kaya akan antioksidan dan vitamin C, baik untuk menjaga kesehatan kulit dan meningkatkan kekebalan tubuh.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="Contact">
+            <h2>Kontak Kami</h2>
+            <form action="">
+                <label>Nama</label>
+                <input type="text" placeholder="Masukkan Nama" required>
+                <label>Email</label>
+                <input type="email" placeholder="Masukkan Email" required>
+                <label>Pesan</label>
+                <textarea name="pesan" id="Pesan" cols="30" rows="5" placeholder="Pesan" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Jl. Surya Kencana Putra No.12, Kota Semarang</p>
+        <a href="mailto:annisanurramadhani93@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://www.instagram.com/annisanurramadhani"><i class="fa-brands fa-instagram"></i></a>
+    </footer>
+</body>
+
+</html>

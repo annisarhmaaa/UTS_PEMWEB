@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contact Mix Juice</title>
+    <style>
+        /* Styling Umum */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f9f9; /* Warna latar belakang pastel */
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(45deg, #FFDD00, #FFA500); /* Gradasi kuning ke oranye */
+            color: #2b2f77; 
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ff69b4; /* Warna pink cerah untuk kesan lebih ceria */
+        }
+
+        header nav h1 {
+            font-size: 28px;
+            color: #2b2f77;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: inline-flex;
+            gap: 25px;
+        }
+
+        header nav ul li a {
+            color: #2b2f77;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        /* Main Styling */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff69b4; /* Warna pink cerah */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            transition: box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            box-shadow: 0 0 5px #ff69b4;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #ff1493;
+            transform: scale(1.05);
+        }
+
+        /* Informasi Kontak Styling */
+        .info-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .info-contact p {
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        .info-contact i {
+            color: #ff69b4;
+            margin-right: 10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: linear-gradient(45deg, #FFDD00, #FFA500); /* Gradasi kuning ke oranye */
+            color: #2b2f77;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #2b2f77;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ff69b4;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>CONTACT MIX JUICE</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Hubungi Kami</h2>
+        <form action="">
+            <label>Nama</label>
+            <input type="text" placeholder="Masukkan Nama" required>
+            <label>Email</label>
+            <input type="email" placeholder="Masukkan Email" required>
+            <label>Pesan</label>
+            <textarea name="pesan" id="Pesan" cols="30" rows="5" placeholder="Pesan" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+
+        <section class="info-contact">
+            <h3>Informasi Kontak</h3>
+            <p><i class="fa-regular fa-envelope"></i> Email: annisanurramadhani93@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> Telepon: +62 812-3456-7890</p>
+            <p><i class="fa-brands fa-instagram"></i> Instagram: @annisanurramadhani</p>
+            <p><i class="fa-solid fa-map-marker-alt"></i> Alamat: Jl. Surya Kencana Putra No.12, Kota Semarang</p>
+        </section>
+    </main>
+    <footer>
+        <p>Jl. Surya Kencana Putra No.12, Kota Semarang</p>
+        <a href="mailto:annisanurramadhani93@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://www.instagram.com/annisanurramadhani"><i class="fa-brands fa-instagram"></i></a>
+    </footer>
+</body>
+
+</html>
